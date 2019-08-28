@@ -36,8 +36,9 @@ syntax region dafnyString start=/"/ skip=/\\"/ end=/"/
 syntax match dafnyComment /\/\/.*/
 syntax region dafnyComment start="/\*" end="\*/"
 
-syntax match dafnyNumber /\d\+\>/
-syntax match dafnyIdentifier /\<\w\+\>/
+syntax match dafnyNumber /\<\d\%(_\?\d\)*\>/
+syntax match dafnyNumber /\<0x\x\%(_\?\x\)*\>/
+syntax match dafnyNumber /\<\d\%(_\?\d\)*\.\d\%(_\?\d\)*\>/
 
 syntax match dafnyOperator "==>"
 syntax match dafnyOperator "<=="
@@ -45,18 +46,18 @@ syntax match dafnyOperator "<==>"
 syntax match dafnyOperator "|"
 syntax match dafnyOperator "::"
 
-highlight link dafnyFunction Function
-highlight link dafnyMethod Statement
-highlight link dafnyModule StorageClass
-highlight link dafnyTypeDef Typedef
-highlight link dafnyConditional Conditional
-highlight link dafnyRepeat Repeat
-highlight link dafnyKeyword Keyword
-highlight link dafnyType Type
-highlight link dafnyLogic Debug
-highlight link dafnyComment Comment
-highlight link dafnyString String
-highlight link dafnyNumber Number
-highlight link dafnyOperator Operator
-highlight link dafnyStatement Statement
-highlight link dafnyBoolean Boolean
+highlight link dafnyFunction pythonStatement
+highlight link dafnyMethod pythonStatement
+highlight link dafnyModule cStorageClass
+highlight link dafnyTypeDef pythonStatement
+highlight link dafnyConditional pythonConditional
+highlight link dafnyRepeat pythonRepeat
+highlight link dafnyKeyword scalaKeyword
+highlight link dafnyType scalaType
+highlight link dafnyLogic pythonStatement
+highlight link dafnyComment scalaComment
+highlight link dafnyString scalaString
+highlight link dafnyNumber scalaNumber
+highlight link dafnyOperator scalaOperator
+highlight link dafnyStatement pythonStatement
+highlight link dafnyBoolean scalaBoolean
