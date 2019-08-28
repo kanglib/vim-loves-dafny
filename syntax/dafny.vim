@@ -61,3 +61,10 @@ highlight link dafnyNumber scalaNumber
 highlight link dafnyOperator scalaOperator
 highlight link dafnyStatement pythonStatement
 highlight link dafnyBoolean scalaBoolean
+
+syntax keyword valeKeyword axiom bv by call Dependent dependent extern for fun
+syntax keyword valeKeyword goto havoc implies in inline inout int_range is let
+syntax keyword valeKeyword lets operand_type operator out precedence preserves
+syntax keyword valeKeyword procedure prop readonly reveal tuple Type
+
+highlight link valeKeyword scalaKeyword

@@ -6,4 +6,4 @@
 " License:     Microsoft Public License (Ms-PL)
 " ============================================================================
 
-au BufRead,BufNewFile *.dfy set filetype=dafny
+au BufRead,BufNewFile *.dfy,*.vad set filetype=dafny
